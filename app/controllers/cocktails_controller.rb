@@ -1,8 +1,9 @@
 class CocktailsController < ApplicationController
-before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
+  before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
 
   def index
     @cocktails = Cocktail.all
+    render layout: 'home'
   end
 
   def show

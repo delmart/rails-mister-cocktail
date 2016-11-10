@@ -13,3 +13,20 @@
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
+
+
+.container{
+  background-color: grey;
+  margin-top: 50px;
+  width: 1200px;
+}
+
+
+.card{
+  background-color: red;
+}
+
+ .form-control{
+    width: 400px;
+    margin: 0 auto;
+  }

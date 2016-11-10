@@ -1,5 +1,15 @@
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+
+
+<div class="container text-center">
+  <div class="text-center"></div>
+    <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :name, :class => "input" %>
+    <%= f.button :submit, :class => "btn btn-primary"%>
+      <%= link_to cocktails_path do %>
+    <button type="button" class="btn btn-primary">retour</button>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+

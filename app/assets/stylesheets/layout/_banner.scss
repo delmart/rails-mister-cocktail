@@ -1,15 +1,19 @@
 .banner{
-  height: 300px;
+  height: 355px;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
   h1{
     margin: 0;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 3px 3px 6px black;
     padding-top: 113px;
     padding-bottom: 80px;
     font-family: 'Paytone One', sans-serif;
     font-size: 55px;
     letter-spacing: 12px;
+  }
+  p{
+    font-family: 'Alice', serif;
+    letter-spacing: 14px;
   }
 }
