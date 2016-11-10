@@ -1,4 +1,3 @@
-Dose.destroy_all
 Ingredient.destroy_all
 
 Ingredient.create(name: "citron")
