@@ -1,25 +1,28 @@
 <div class="wrapper text-center">
 <div class="container text-center">
   <div class="card2">
-  <h2><%= @cocktail.name %></h2>
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 450, crop: :fill, class: 'cocktail-image img-responsive' %>
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <h2><%= @cocktail.name %></h2>
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 450, crop: :fill, class: 'cocktail-image img-responsive' %>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <h4>Ingredients</h4>
+          <% @cocktail.doses.each do |dose| %>
+            <ul class="list-inline text-center">
+              <li><p><%= ' -> ' + dose.description + ' de ' + dose.ingredient.name %></p></li>
+              <li><%= link_to edit_cocktail_dose_path(@cocktail,dose) do %>
+                <%= icon('pencil') %>
+              <% end %></li>
+              <li> <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <%= icon('trash') %>
+              <% end %></li>
+            </ul>
+          <% end %>
+      </div>
+    </div>
 
-
-  <h4>Ingredients</h4>
-    <% @cocktail.doses.each do |dose| %>
-      <ul class="list-inline text-center">
-        <li><p><%= ' -> ' + dose.description + ' de ' + dose.ingredient.name %></p></li>
-        <li><%= link_to edit_cocktail_dose_path(@cocktail,dose) do %>
-        <%= icon('pencil') %>
-        <% end %></li>
-        <li> <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-        <%= icon('trash') %>
-        <% end %></li>
-      </ul>
-    <% end %>
-
-    <br>
-
+    <div class="button-group">
      <%= link_to cocktail_path(@cocktail),method: :delete,
      data: { confirm: "Are you sure?" } do %>
       <button type="button" class="btn btn-danger">Supprimer</button>
@@ -32,7 +35,8 @@
      <%= link_to cocktails_path do %>
       <button type="button" class="btn btn-primary">retour</button>
      <% end %>
-</div>
+     </div>
+  </div>
  </div>
 </div>
 
