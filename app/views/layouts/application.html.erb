@@ -12,8 +12,12 @@
   </head>
 
   <body>
-     <%= render 'banfoo/navbar' %>
+    <div class="page-wrapper">
+      <%= render 'banfoo/navbar' %>
+      <%= yield %>
+    </div>
 
-    <%= yield %>
+      <%= render 'banfoo/footer' %>
+
   </body>
 </html>

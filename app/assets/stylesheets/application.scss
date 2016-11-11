@@ -14,19 +14,90 @@
 @import "pages/index";
 @import "vendor/index";
 
+body {
+  background-color: #333333;
+}
+
+.cocktail-image {
+  display: inline;
+}
+
+.page-wrapper {
+  background-color: #EAEAEA;
+  margin-bottom: 100px;
+}
 
 .container{
-  background-color: grey;
-  margin-top: 50px;
-  width: 1200px;
+  margin-top: 0px;
+  width: 100%;
+  padding-top: 20px;
 }
 
 
 .card{
-  background-color: red;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+  p{
+    padding-top: 20px;
+    font-family: 'Alice';
+    font-size: 18px;
+    text-decoration: overline;
+  }
 }
 
  .form-control{
-    width: 400px;
-    margin: 0 auto;
+  margin: 0 auto;
+}
+
+
+
+.padding{
+  margin: 40px;
+  background-color: black;
+  border-color: black;
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-family: 'Alice', serif;
+}
+
+.wrapper{
+  background-color: #EAEAEA;
+  padding: 20px;
+}
+
+.wrapper-white{
+  background-color: white;
+  padding: 20px;
+}
+
+.card2{
+  margin: 20px;
+  padding: 20px;
+  padding-bottom: 100px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 180px;
+  h2{
+     margin-bottom: 37px;
+     font-family: 'Paytone One', sans-serif;
   }
+  h4{
+      margin: 30px;
+      text-decoration: underline;
+      letter-spacing: 4px;
+  }
+}
+
+#cocktail_photo{
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+
+
+
+

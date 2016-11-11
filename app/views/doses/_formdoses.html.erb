@@ -1,17 +1,21 @@
 
 
-
+<div class="wrapper">
 <div class="container text-center">
-  <div class="text-center">
-    <h1>Ajouter vos ingrédients</h1>
-      <%= simple_form_for([@cocktail, @dose]) do |f| %>
-      <%= f.error_notification %>
-      <%= f.input :description %>
-      <%= f.association :ingredient %>
-      <%= f.button :submit %>
+  <div class="row text-center">
+    <div class="card2">
+      <h1>Ajouter vos ingrédients</h1>
+        <%= simple_form_for [@cocktail, @dose], html: {class: 'col-xs-12 col-sm-6 col-sm-offset-3'} do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.button :submit %>
         <%= link_to cocktail_path(@cocktail) do %>
           <button type="button" class="btn btn-primary">retour</button>
-        <% end %>
+          <% end %>
       <% end %>
+      <div class="clearfix"></div>
+    </div>
   </div>
+</div>
 </div>
