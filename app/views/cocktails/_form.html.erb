@@ -1,10 +1,9 @@
 
-
-<div class="container text-center">
-  <div class="row text-center">
-      <%= simple_form_for(@cocktail) do |f| %>
-        <div class="col-xs-12">
-          <div class="card2 text-center">
+<div class="wrapper">
+  <div class="container text-center">
+    <div class="row text-center">
+      <div class="card2 text-center">
+        <%= simple_form_for @cocktail, html: {class: 'col-xs-12 col-sm-6 col-sm-offset-3'} do |f| %>
             <%= f.error_notification %>
             <%= f.input :name %>
             <%= f.input :photo %>
@@ -13,9 +12,10 @@
             <%= link_to cocktails_path do %>
               <button type="button" class="btn btn-primary">retour</button>
             <% end %>
-          </div>
-        </div>
-      <% end %>
+        <% end %>
+        <div class="clearfix"></div>
+      </div>
+    </div>
   </div>
 </div>
 
