@@ -7,9 +7,9 @@
       <h1>Ajouter vos ingrédients</h1>
         <%= simple_form_for [@cocktail, @dose], html: {class: 'col-xs-12 col-sm-6 col-sm-offset-3'} do |f| %>
         <%= f.error_notification %>
-        <%= f.input :description %>
+        <%= f.input :description, placeholder: "indiquez la quantité et sélectionnez l'ingrédient dans la liste" %>
         <%= f.association :ingredient %>
-        <%= f.button :submit %>
+        <%= f.button :submit, html: {class: 'btn btn-info'} %>
         <%= link_to cocktail_path(@cocktail) do %>
           <button type="button" class="btn btn-primary">retour</button>
           <% end %>
